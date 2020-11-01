@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: softprogy-balancer
+
+server:
+  port: 8090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://vm-ci:8761/eureka/
+
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 20000
+
+#ribbon:
+#  ConnectTimeout: 3000
+#  ReadTimeout: 10000
