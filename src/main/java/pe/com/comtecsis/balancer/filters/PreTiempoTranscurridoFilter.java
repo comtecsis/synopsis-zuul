@@ -34,6 +34,7 @@ public class PreTiempoTranscurridoFilter extends ZuulFilter
 
         Long tiempoInicio = System.currentTimeMillis();
         request.setAttribute("tiempoInicio", tiempoInicio);
+        ctx.addZuulRequestHeader("Authorization", request.getHeader("Authorization"));
 
         return null;
     }
@@ -47,6 +48,6 @@ public class PreTiempoTranscurridoFilter extends ZuulFilter
     @Override
     public int filterOrder()
     {
-        return 1;
+        return 10;
     }
 }
